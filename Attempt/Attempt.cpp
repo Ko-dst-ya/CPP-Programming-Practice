@@ -2,10 +2,20 @@
 //
 
 #include <iostream>
+#include <vector>
 
 int main()
 {
     std::cout << "Hello World! My nickname is Ko-dst-ya\n";
+
+    std::vector < int > vec;
+
+    vec.reserve(1e3);
+
+    for (auto i = 1e3; i >= 0; --i)
+    {
+        v.push_back(i);
+    }
 
     return 0;
 }
