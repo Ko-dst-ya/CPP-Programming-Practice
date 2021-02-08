@@ -18,7 +18,8 @@ int main()
     }
 
     std::array < double, 100 > arr;
-
+    
+    std::cout << "Hello from GitHub!\n";
 
     return 0;
 }
