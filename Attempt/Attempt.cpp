@@ -17,6 +17,9 @@ int main()
         v.push_back(i);
     }
 
+    std::array < double, 100 > arr;
+
+
     return 0;
 }
 
