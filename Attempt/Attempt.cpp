@@ -25,6 +25,8 @@ int main()
 
     std::cout << "Hello from new branch!" << std::endl;
 
+    std::cout << "Hello again from branch" << std::endl;
+
     return 0;
 }
 
