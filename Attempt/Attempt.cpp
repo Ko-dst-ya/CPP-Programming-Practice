@@ -17,6 +17,8 @@ int main()
         v.push_back(i);
     }
 
+    std::sort(std::begin(v), std::end(v));
+
     std::array < double, 100 > arr;
     
     std::cout << "Hello from GitHub!\n";
