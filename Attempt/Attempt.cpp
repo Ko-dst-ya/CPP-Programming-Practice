@@ -17,15 +17,9 @@ int main()
         v.push_back(i);
     }
 
-    std::sort(std::begin(v), std::end(v));
-
     std::array < double, 100 > arr;
     
     std::cout << "Hello from GitHub!\n";
-
-    std::cout << "Hello from new branch!" << std::endl;
-
-    std::cout << "Hello again from branch" << std::endl;
 
     return 0;
 }
