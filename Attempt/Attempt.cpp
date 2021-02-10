@@ -25,6 +25,8 @@ int main()
 
     std::cout << "Hello, this branch is for Rebase HEAD To" << std::endl;
 
+    std::cout << "Hello again from Rebase HEAD To branch" << std::endl;
+
     return 0;
 }
 
