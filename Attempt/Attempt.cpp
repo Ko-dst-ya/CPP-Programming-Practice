@@ -1,8 +1,8 @@
 ﻿#include <iostream>
 
-bool master_function()
+int branch_function()
 {
-    return true;
+    return 1;
 }
 
 int main()
