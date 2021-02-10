@@ -4,6 +4,8 @@
 #include <iostream>
 #include <vector>
 
+void f() {}
+
 int main()
 {
     std::cout << "Hello World! My nickname is Ko-dst-ya\n";
