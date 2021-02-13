@@ -12,22 +12,9 @@ class Timer
 public:
   using clock_t = std::chrono::steady_clock;
   using time_point_t = clock_t::time_point;
-  //using millisec_t = std::chrono::milliseconds;
 
   Timer() : m_begin(clock_t::now()) {}
-/*
-  void stop_timer(millisec_t prom = millisec_t(0))
-  {
-    if(prom != millisec_t(0))
-    {
-      prom = clock_t::now() - m_begin;
-    }
 
-    m_begin = clock_t::now();
-  }
-
-  void restart_timer()
-*/
   ~Timer()
   {
     auto end = clock_t::now();
@@ -116,5 +103,5 @@ int main()
     flst.sort();
   }
   
-  //std::cout << "Hello World!\n" << 10e4;
+  return EXIT_SUCCESS;
 }
