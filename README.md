@@ -10,5 +10,5 @@ Spring_term
 1.  [Attempt.cpp](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Attempt/Attempt.cpp)
 
 # 2 week (Sequence containers) <a name="02"></a>
-1.  [Выделение памяти в векторе](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/2%20(Sequence%20containers)/Capacity.cpp)
-2.  [Сортировка последовательных контейнеров](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/2%20(Sequence%20containers)/Sort.cpp)
+1.  [Выделение памяти в векторе](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/2%20(Sequence%20containers)/Capacity.cpp)
+2.  [Сортировка последовательных контейнеров](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/2%20(Sequence%20containers)/Sort.cpp)
