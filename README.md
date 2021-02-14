@@ -10,4 +10,5 @@ Spring_term
 [Attempt.cpp](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Attempt/Attempt.cpp)
 
 # 2 week (Sequence containers) <a name="02"></a>
-[Sort.cpp](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/2%20(Sequence%20containers)/Sort.cpp)
+1.  [Capacity.cpp](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/2%20(Sequence%20containers)/Capacity.cpp)
+2.  [Sort.cpp](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/2%20(Sequence%20containers)/Sort.cpp)
