@@ -28,20 +28,26 @@ private:
 
 int main()
 {
-    std::array < int, 10000 > arr;
+    const int N = 1e4;
+    std::array < int, N > arr;
     std::vector < int > vec;
     std::deque < int > deq;
     std::list < int > lst;
     std::forward_list < int > flst;
 
-    for (auto i = 10000; i >= 0; --i)
+    for (auto i = N-1; i >= 0; --i)
+    {
+        arr[N-1-i] = i;
+    }
+    
+    for (auto i = N; i >= 0; --i)
     {
         vec.push_back(i);
         deq.push_back(i);
         lst.push_back(i);
     }
 
-    for (auto i = 0; i <= 10000; ++i)
+    for (auto i = 0; i <= N; ++i)
     {
         flst.push_front(i);
     }
