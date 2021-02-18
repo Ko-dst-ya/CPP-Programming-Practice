@@ -28,26 +28,28 @@ private:
 
 int main()
 {
-    const int N = 1e4;
+    const int N = 1e5;
     std::array < int, N > arr;
     std::vector < int > vec;
     std::deque < int > deq;
     std::list < int > lst;
     std::forward_list < int > flst;
 
-    for (auto i = N-1; i >= 0; --i)
+    for (auto i = 0; i < N; ++i)
     {
-        arr[N-1-i] = i;
-    }
-    
-    for (auto i = N; i >= 0; --i)
-    {
-        vec.push_back(i);
-        deq.push_back(i);
-        lst.push_back(i);
+        arr[i] = N - i;
     }
 
-    for (auto i = 0; i <= N; ++i)
+    vec.reserve(N);
+
+    for (auto i = 0; i < N; ++i)
+    {
+        vec.push_back(N - i);
+        deq.push_back(N - i);
+        lst.push_back(N - i);
+    }
+
+    for (auto i = 0; i < N; ++i)
     {
         flst.push_front(i);
     }
