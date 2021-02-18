@@ -53,6 +53,21 @@ int main()
     {
         flst.push_front(i);
     }
+    
+    /*
+    Linear Container    Microseconds (approx)
+      ______________________________________
+        Array               10 000
+
+        Vector              21 000
+
+        Forward
+         List               26 000
+
+        Deque               29 000
+
+        List                60 000
+    */
 
     std::cout << "Array:\nstd::sort - ";
     {
