@@ -39,11 +39,11 @@ int main()
     // Предельный случай большого запроса памяти 
     try
     {
-        vec.reserve(1e10); //Начинает выскакивать на 10^10
+        vec.reserve(1e10); // Начинает выскакивать bad alloc на 10^10
     }
     catch(std::exception & oor)
     {
-        std::cerr << "\nLimiting case\n" <<  oor.what() << std::endl;
+        std::cerr << "\nLimiting case\n" <<  oor.what() << std::endl; // bad alloc
     }
 
     system("pause");
