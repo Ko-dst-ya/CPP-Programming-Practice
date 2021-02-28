@@ -19,3 +19,6 @@ Spring_term
 1. [Сравнения set и vector](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/3%20(Hash)/set_vs_vector.cpp)
 2. - [Зависимость количества коллизий от количества добавленных элементов](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/3%20(Hash)/hash_value.cpp)
    - [График](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/3%20(Hash)/Hash_value_plot.png)
+3. - [Сравнение различных хеш-функций](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/3%20(Hash)/different_hash_functions.cpp)
+   - [Графики](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/3%20(Hash)/Different_hash_functions.ipynb)
+
