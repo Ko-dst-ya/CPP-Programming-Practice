@@ -24,5 +24,5 @@ Spring_term
    - [Графики (они в самом низу)](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/3%20(Hash)/Different_hash_functions.ipynb)
 
 # 4 week (Algorithms) <a name="04"></a>
-* [Задачи](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/4%20(Algorithms)/Source.cpp)
+1. [Задачи](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/4%20(Algorithms)/Source.cpp)
 
