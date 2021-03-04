@@ -50,8 +50,8 @@ int main(int argc, char ** argv)
     const int H = 100000;       // size of hash table
     const size_t length = 10;   // length of random words
     
-    std::set < std::string > words = make_random_words(H, length);      // create set of random words
-    std::vector < int > numbers = make_random_positive_numbers(H, H);   // create vector of random numbers
+    std::set < std::string > words = make_random_words(H, length);      // set of random words
+    std::vector < int > numbers = make_random_positive_numbers(H, H);   // vector of random numbers
 
     for (auto i = 10; i < H; i += 100)
     {
