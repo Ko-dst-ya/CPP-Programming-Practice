@@ -49,33 +49,25 @@ int main(int argc, char ** argv)
 {
     const int H = 100000;       // size of hash table
     const size_t length = 10;   // length of random words
+    
+    std::set < std::string > words = make_random_words(H, length);      // create set of random words
+    std::vector < int > numbers = make_random_positive_numbers(H, H);   // create vector of random numbers
 
-    for (auto i = 10; i < H; i+=100)
+    for (auto i = 10; i < H; i += 100)
     {
         std::set < int > hashes;
-        std::set < std::string > words = make_random_words(i, length);
         int collisions = 0;
+        auto it_word = words.begin();
 
         for (auto j = 0; j < i; ++j)
         {
-            auto iterator_and_bool = hashes.insert(boost::hash_value(rand() % H));
-
-            if (!iterator_and_bool.second)
+            if(!hashes.insert(hash_value(numbers[j], *it_word)).second)
             {
                 ++collisions;
             }
+
+            ++it_word;
         }
-
-        for (std::string word : words)
-        {
-            auto iterator_and_bool = hashes.insert(boost::hash_value(word));
-
-            if (!iterator_and_bool.second)
-            {
-                ++collisions;
-            }
-        }
-
         std::cout << "(" << i << "," << collisions << ")," << std::endl; // format of output if for python
     }
 
