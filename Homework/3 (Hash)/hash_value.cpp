@@ -20,6 +20,16 @@ std::set < std::string > make_random_words(std::size_t N, std::size_t length) //
     return words;
 }
 
+std::size_t hash_value(int number, const std::string & word)
+{
+    std::size_t seed = 0;
+
+    boost::hash_combine(seed, number);
+    boost::hash_combine(seed, word);
+
+    return seed;
+}
+
 int main(int argc, char ** argv)
 {
     const int H = 100000;       // size of hash table
