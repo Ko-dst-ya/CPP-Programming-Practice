@@ -20,6 +20,21 @@ std::set < std::string > make_random_words(std::size_t N, std::size_t length) //
     return words;
 }
 
+std::vector < int > make_random_positive_numbers(int ceil, std::size_t amount)
+{
+    std::uniform_int_distribution <> uid(0, ceil);
+    std::default_random_engine dre(static_cast < std::size_t > (
+                                           std::chrono::system_clock::now().time_since_epoch().count()));
+
+    std::vector < int > numbers;
+    numbers.reserve(amount);
+
+    for (auto i = 0; i < amount; ++i)
+        numbers.push_back(uid(dre));
+
+    return numbers;
+}
+
 std::size_t hash_value(int number, const std::string & word)
 {
     std::size_t seed = 0;
