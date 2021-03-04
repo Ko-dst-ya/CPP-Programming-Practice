@@ -5,6 +5,7 @@ Spring_term
 - [1 week (Git and Chrono)](#01)
 - [2 week (Sequence containers)](#02)
 - [3 week (Sets, Hashes, Multiindexes)](#03)
+- [4 week (Algorithms)](#04)
 
 
 # 1 week (Git and Chrono)  <a name="01"></a>
@@ -21,4 +22,7 @@ Spring_term
    - [График](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/3%20(Hash)/Hash_value_plot.png)
 3. - [Сравнение различных хеш-функций](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/3%20(Hash)/different_hash_functions.cpp)
    - [Графики (они в самом низу)](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/3%20(Hash)/Different_hash_functions.ipynb)
+
+# 4 week (Algorithms) <a name="04"></a>
+* [Задачи](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/4%20(Algorithms)/Source.cpp)
 
