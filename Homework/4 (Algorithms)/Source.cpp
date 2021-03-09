@@ -118,13 +118,18 @@ int main(int argc, char ** argv)
     */
 
 // Eleventh (replacing some first element)
-    std::replace_if(std::begin(seq2), std::next(std::begin(seq2) + 4),
-                 [](auto x){return x;}, 1);
+    std::fill_n(std::begin(seq2), 5, 1); // Replacing the first 5 elements with 1
 
     std::cout << "2nd after replacing with 1:\n";
     print_vec(seq2);
 
     std::cout << "\n";
+    
+    /*
+     * Possible implementation
+     std::replace_if(std::begin(seq2), std::next(std::begin(seq2) + 4),
+                 [](auto x){return x;}, 1);
+    */
 
 // Twelfth (Sequence 3 creating)
     std::vector < int > seq3;
