@@ -8,10 +8,22 @@
 #include <random>
 #include <chrono>
 
+template < typename T >
+void print_vec(std::vector < T > vector)
+{
+    std::for_each(std::begin(vector),
+                  std::end(vector),
+                  [](auto x){std::cout << x << ' ';});
+
+    std::cout << std::endl;
+}
+
 int main(int argc, char ** argv)
 {
 // First (Sequence 1 filling)
-    std::vector <int> seq1 = {7, 2, 1, 9, 4, 6, 3, 5, 10, 8};
+    std::vector < int > seq1 (10);
+    std::iota(std::begin(seq1), std::end(seq1), 1);
+    print_vec(seq1);
 
 // Second (Adding some elements)
     std::copy(std::istream_iterator < int > (std::cin),
@@ -19,11 +31,9 @@ int main(int argc, char ** argv)
             std::back_inserter(seq1));
 
     std::cout << "1st after extra inputting:";
-    std::for_each(std::begin(seq1),
-                  std::end(seq1),
-                  [](auto x){std::cout << x << ' ';});
+    print_vec(seq1);
 
-    std::cout << "\n\n";
+    std::cout << "\n";
 
 // Third (Mixing)
 
@@ -33,21 +43,17 @@ int main(int argc, char ** argv)
     std::shuffle(seq1.begin(), seq1.end(), g);
 
     std::cout << "After mixing :\n";
-    std::for_each(std::begin(seq1),
-                  std::end(seq1),
-                  [](auto x){std::cout << x << ' ';});
+    print_vec(seq1);
 
-    std::cout << "\n\n";
+    std::cout << "\n";
 
 // Fourth (duplicates removing)
     std::sort(std::begin(seq1), std::end(seq1));
     seq1.erase(std::unique(std::begin(seq1), std::end(seq1)), std::end(seq1));
 
-    std::for_each(std::begin(seq1),
-                  std::end(seq1),
-                  [](auto x){std::cout << x << ' ';});
+    print_vec(seq1);
 
-    std::cout << "\n\n";
+    std::cout << "\n";
 
 // Fifth (amount of odd numbers)
     auto amount_of_odds = std::count_if(std::begin(seq1), std::end(seq1), [](auto x){return x % 2;});
@@ -58,7 +64,7 @@ int main(int argc, char ** argv)
     auto [min, max] = std::minmax_element(std::begin(seq1), std::end(seq1));
 
     std::cout << "min : " << *min << "\nmax : " << *max << std::endl;
-    std::cout << "\n\n";
+    std::cout << "\n";
 
 // Seventh (finding prime number)
 
@@ -80,11 +86,9 @@ int main(int argc, char ** argv)
             [](auto x){ return x * x;});
 
     std::cout << "Squares :\n";
-    std::for_each(std::begin(seq1),
-                  std::end(seq1),
-                  [](auto x){std::cout << x << ' ';});
+    print_vec(seq1);
 
-    std::cout << "\n\n";
+    std::cout << "\n";
 
 // Ninth (Sequence 2 creating)
     std::vector <int> seq2 (seq1.size());
@@ -95,12 +99,10 @@ int main(int argc, char ** argv)
     std::generate(std::begin(seq2), std::end(seq2), [&dre, &uid](){return uid(dre);});
 
     std::cout << "2nd sequence:\n" << std::endl;
+    
+    print_vec(seq2);
 
-    std::for_each(std::begin(seq2),
-                  std::end(seq2),
-                  [](auto x){std::cout << x << ' ';});
-
-    std::cout << "\n\n";
+    std::cout << "\n";
 
 // Tenth (sum(sqe2))
 
@@ -120,12 +122,9 @@ int main(int argc, char ** argv)
                  [](auto x){return x;}, 1);
 
     std::cout << "2nd after replacing with 1:\n";
+    print_vec(seq2);
 
-    std::for_each(std::begin(seq2),
-                  std::end(seq2),
-                  [](auto x){std::cout << x << ' ';});
-
-    std::cout << "\n\n";
+    std::cout << "\n";
 
 // Twelfth (Sequence 3 creating)
     std::vector < int > seq3;
@@ -133,22 +132,18 @@ int main(int argc, char ** argv)
     std::cout << "3rd sequence:\n";
     std::transform(std::begin(seq1), std::end(seq1), std::begin(seq2), std::back_inserter(seq3),
                    [](auto a, auto b) { return a - b ;});
+    
+    print_vec(seq3);
 
-    std::for_each(std::begin(seq3),
-                  std::end(seq3),
-                  [](auto x){std::cout << x << ' ';});
-
-    std::cout << "\n\n";
+    std::cout << "\n";
 
 // Thirteenth (replacing each element in 3rd sequence with 0)
     std::cout << "3rd after replacing negative to 0-s:\n";
 
     std::replace_if(std::begin(seq3), std::end(seq3), [](auto x){ return x<0;},0);
-    std::for_each(std::begin(seq3),
-                  std::end(seq3),
-                  [](auto x){std::cout << x << ' ';});
+    print_vec(seq3);
 
-    std::cout << "\n\n";
+    std::cout << "\n";
 
 // Fourteenth (Remove zeros)
     std::cout << "3rd after removing 0-s:\n";
@@ -156,22 +151,18 @@ int main(int argc, char ** argv)
     seq3.erase(std::remove_if(std::begin(seq3), std::end(seq3),
                               [](auto x){return x == 0;}),
                std::end(seq3));
+    
+    print_vec(seq3);
 
-    std::for_each(std::begin(seq3),
-                  std::end(seq3),
-                  [](auto x){std::cout << x << ' ';});
-
-    std::cout << "\n\n";
+    std::cout << "\n";
 
 // Fifteenth (reverse)
     std::cout << "3rd after reversing:\n";
 
     std::reverse(std::begin(seq3), std::end(seq3));
-    std::for_each(std::begin(seq3),
-                  std::end(seq3),
-                  [](auto x){std::cout << x << ' ';});
+    print_vec(seq3);
 
-    std::cout << "\n\n";
+    std::cout << "\n";
 
 // Sixteenth (top 3)
     std::cout << "Extra shuffling 3rd sequence:\n";
@@ -182,28 +173,21 @@ int main(int argc, char ** argv)
                       std::next(std::begin(seq3) + 3),
                       std::end(seq3),
                       [](auto x, auto y){return x > y ;});
-    std::for_each(std::begin(seq3),
-                  std::end(seq3),
-                  [](auto x){std::cout << x << ' ';});
+    print_vec(seq3);
 
     std::cout << std::endl;
 
 // Seventeenth (Sort 1 and 2)
     std::cout << "1st after sorting:\n";
     std::sort(std::begin(seq1), std::end(seq1));
-    std::for_each(std::begin(seq1),
-                  std::end(seq1),
-                  [](auto x){std::cout << x << ' ';});
-
-    std::cout << "\n\n";
+    print_vec(seq1);
+    std::cout << "\n";
 
     std::cout << "2nd after sorting:\n";
     std::sort(std::begin(seq2), std::end(seq2));
-    std::for_each(std::begin(seq2),
-                  std::end(seq2),
-                  [](auto x){std::cout << x << ' ';});
+    print_vec(seq2;
 
-    std::cout << "\n\n";
+    std::cout << "\n";
 
 // Eighteenth (4th seq creating)
     std::vector < int > seq4;
@@ -211,11 +195,9 @@ int main(int argc, char ** argv)
     std::cout << "4th sequence:\n";
 
     std::merge(std::begin(seq1), std::end(seq1), std::begin(seq2), std::end(seq2), std::back_inserter(seq4));
-    std::for_each(std::begin(seq4),
-                  std::end(seq4),
-                  [](auto x){std::cout << x << ' ';});
+    print_vec(seq4);
 
-    std::cout << "\n\n";
+    std::cout << "\n";
 
 // Nineteenth (equal range)
     std::cout << "Eq_range for 1:\n";
