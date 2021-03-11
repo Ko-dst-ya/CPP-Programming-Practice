@@ -67,7 +67,24 @@ int main(int argc, char ** argv)
     std::cout << "\n";
 
 // Seventh (finding prime number)
+    auto prime = std::find_if(std::begin(seq1), std::end(seq1),
+                 [](auto x)
+                  {
+                    if(x == 1)
+                    {
+                        return false;
+                    }
+                    for (auto i = 2; i <= x; ++i)
+                    {
+                        if (x % i == 0)
+                        {
+                            return false;
+                        }
+                    }
+                    return true;
+                  });
 
+    std::cout << *prime << std::endl;
 
 
 
