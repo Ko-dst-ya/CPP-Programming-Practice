@@ -174,13 +174,18 @@ int main(int argc, char ** argv)
     std::shuffle(seq3.begin(), seq3.end(), g);
 
     std::cout << "Top 3 elements:\n";
-    std::partial_sort(std::begin(seq3),
-                      std::next(std::begin(seq3) + 3),
-                      std::end(seq3),
-                      [](auto x, auto y){return x > y ;});
+    std::nth_element(std::begin(seq3), std::begin(seq3) + 4, std::end(seq3),
+                     std::greater < int > ());
+    
     print_vec(seq3);
 
     std::cout << std::endl;
+
+//     Possible implementation
+//     std::partial_sort(std::begin(seq3),
+//                       std::next(std::begin(seq3) + 3),
+//                       std::end(seq3),
+//                       [](auto x, auto y){return x > y ;});
 
 // Seventeenth (Sort 1 and 2)
     std::cout << "1st after sorting:\n";
