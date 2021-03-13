@@ -6,6 +6,7 @@ Spring_term
 - [2 week (Sequence containers)](#02)
 - [3 week (Sets, Hashes, Multiindexes)](#03)
 - [4 week (Algorithms)](#04)
+- [5 week (Work with text)](#05)
 
 
 # 1 week (Git and Chrono)  <a name="01"></a>
@@ -27,4 +28,8 @@ Spring_term
 0. [КВ](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/4%20(Algorithms)/4Answers.txt)
 1. [Задачи](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/4%20(Algorithms)/Source.cpp)
 
+# 5 week (Work with text) <a name="05"></a>
+0. [КВ](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/5%20(Work%20with%20text)/5Answers.txt)
+1. [email адвреса](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/5%20(Work%20with%20text)/Emails.cpp)
+2. [Нахождение дат в тексте](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/5%20(Work%20with%20text)/Dates.cpp)
 
