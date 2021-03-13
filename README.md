@@ -30,6 +30,6 @@ Spring_term
 
 # 5 week (Work with text) <a name="05"></a>
 0. [КВ](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/5%20(Work%20with%20text)/5Answers.txt)
-1. [email адвреса](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/5%20(Work%20with%20text)/Emails.cpp)
+1. [email адреса](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/5%20(Work%20with%20text)/Emails.cpp)
 2. [Нахождение дат в тексте](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/5%20(Work%20with%20text)/Dates.cpp)
 
