@@ -14,15 +14,19 @@ bool is_email_valid(const std::string& email)
 
 int main()
 {
-    std::string email1 = "text.example@randomcom";
-    std::string email2 = "text.example@random.com";
+    std::string data = "abc_dj@madj.jd 1234.asd  hkdhkshga def@laocom 346j ratr 5678_df@mail.ru  roguorug 435 hij@phystech.edu";
 
-    std::vector < std::string > emails = {email1, email2};
+    std::sregex_iterator begin(data.cbegin(), data.cend(), pattern);
+    std::sregex_iterator end;
 
-    std::for_each(std::begin(emails), std::end(emails),
-                  [](auto x){std::cout << x << " : " << (is_email_valid(x) ?
-
-                  "valid" : "invalid") << std::endl;});
+   std::for_each(begin, end, [](const std::smatch & m)
+    {
+        for (std::size_t i = 0; i < m.size(); ++i)
+        {
+            std::cout << (is_email_valid(m[0]) ? "valid" : "invalid") << " | " <<  m[i] << " | " ;
+        }
+        std::cout << std::endl;
+    });
     
     std::system("pause");
     
