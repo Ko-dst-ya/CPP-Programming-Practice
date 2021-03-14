@@ -6,7 +6,7 @@ bool is_email_valid(const std::string& email)
 {
     // define a regular expression
     const std::regex pattern
-            ("(\\w+)(\\.|_)?(\\w*)@(\\w+)(\\.(\\w+))+");
+            (R"(((\w+)(\.|_))?(\w*)@(\w+)(\.(\w+))+)");
 
     // try to match the string with the regular expression
     return std::regex_match(email, pattern);
@@ -14,7 +14,10 @@ bool is_email_valid(const std::string& email)
 
 int main()
 {
-    std::string data = "abc_dj@madj.jd 1234.asd  hkdhkshga def@laocom 346j ratr 5678_df@mail.ru  roguorug 435 hij@phystech.edu";
+    const std::regex pattern
+            (R"(\w+\.|_?\w*@([\w+\.]*\w++))");
+    
+    std::string data = "abc_dj@madj.jd 1234.asd  hkdhkshga def@laocom 346j ratr 5678_df@mail.ru  roguorug 435 hij@phystech.edu ajsd@mail.ru.gmail.com";
 
     std::sregex_iterator begin(data.cbegin(), data.cend(), pattern);
     std::sregex_iterator end;
