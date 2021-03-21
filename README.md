@@ -7,6 +7,7 @@ Spring_term
 - [3 week (Sets, Hashes, Multiindexes)](#03)
 - [4 week (Algorithms)](#04)
 - [5 week (Work with text)](#05)
+- [6 (Streams, File system, Data format)](#06)
 
 
 # 1 week (Git and Chrono)  <a name="01"></a>
@@ -32,4 +33,8 @@ Spring_term
 0. [КВ](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/5%20(Work%20with%20text)/5Answers.txt)
 1. [email адреса](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/5%20(Work%20with%20text)/Emails.cpp)
 2. [Нахождение дат в тексте](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/5%20(Work%20with%20text)/Dates.cpp)
+
+# 6 (Streams, File system, Data format) <a name="06"></a>
+2. [Вывод строки, заданной пользоватлем](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/6%20(Streams%2C%20File%20system%2C%20Data%20format)/Seekg.cpp)
+3. [Содержимое директории](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/6%20(Streams%2C%20File%20system%2C%20Data%20format)/Directory.cpp)
 
