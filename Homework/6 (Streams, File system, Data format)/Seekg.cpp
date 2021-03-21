@@ -9,7 +9,7 @@ int main()
     for(auto i = 0; i < 10; ++i)
         fout << "Hello" + std::to_string(i) << std::endl;
     
-    auto size = fout.tellp() / 10; // размер с учётом доп символов
+    auto size = fout.tellp() / 10; // размер слова с учётом доп символов
 
     std::fstream fin("file.txt", std::ios::in);
 
