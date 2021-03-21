@@ -53,10 +53,10 @@ ________________________________________________________________________________
 
 C:\User\Desktop\file.txt
 
-C: 					- root name	| вместе они составляют
-\ (or /) 			- root dir	| root path
+C:					- root name	| вместе они составляют
+\ (or /)			- root dir	| root path
 
-C:\User\Desktop\ 	- parent path
+C:\User\Desktop\	- parent path
 
 file				- stem		| вместе они составляют
 .txt				- extension	| filename
