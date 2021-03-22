@@ -35,6 +35,8 @@ Spring_term
 2. [Нахождение дат в тексте](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/5%20(Work%20with%20text)/Dates.cpp)
 
 # 6 (Streams, File system, Data format) <a name="06"></a>
+0. [КВ](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/6%20(Streams%2C%20File%20system%2C%20Data%20format)/6Answers.txt)
 2. [Вывод строки, заданной пользоватлем](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/6%20(Streams%2C%20File%20system%2C%20Data%20format)/Seekg.cpp)
 3. [Содержимое директории](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/6%20(Streams%2C%20File%20system%2C%20Data%20format)/Directory.cpp)
+4. [JSON](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/6%20(Streams%2C%20File%20system%2C%20Data%20format)/JSON.cpp)
 
