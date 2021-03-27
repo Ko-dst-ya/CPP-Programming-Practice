@@ -28,7 +28,7 @@ int main()
         }
    }
 
-   auto pi = ((double)count / (double)N) * 4.0;
+   auto pi = 4.0 * count / N;
 
     std::cout << pi << std::endl;
     
@@ -39,7 +39,7 @@ int main()
     int count_1 = std::count_if(std::execution::par, std::begin(v), std::end(v),
                   [](auto x){return (x.first)*(x.first) + (x.second)*(x.second) <= 1;});
     
-    auto pi_1 = ((double)count_1 / (double)N) * 4.0;
+    auto pi_1 = 4.0 * count_1 / N;
     
     std::cout << pi_1 << std::endl;
 
