@@ -8,6 +8,7 @@ Spring_term
 - [4 week (Algorithms)](#04)
 - [5 week (Work with text)](#05)
 - [6 (Streams, File system, Data format)](#06)
+- [7 (Parallel)](#07)
 
 
 # 1 week (Git and Chrono)  <a name="01"></a>
@@ -34,9 +35,15 @@ Spring_term
 1. [email адреса](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/5%20(Work%20with%20text)/Emails.cpp)
 2. [Нахождение дат в тексте](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/5%20(Work%20with%20text)/Dates.cpp)
 
-# 6 (Streams, File system, Data format) <a name="06"></a>
+# 6 week (Streams, File system, Data format) <a name="06"></a>
 0. [КВ](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/6%20(Streams%2C%20File%20system%2C%20Data%20format)/6Answers.txt)
 2. [Вывод строки, заданной пользоватлем](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/6%20(Streams%2C%20File%20system%2C%20Data%20format)/Seekg.cpp)
 3. [Содержимое директории](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/6%20(Streams%2C%20File%20system%2C%20Data%20format)/Directory.cpp)
 4. [JSON](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/6%20(Streams%2C%20File%20system%2C%20Data%20format)/JSON.cpp)
 
+# 7 week (Parallel) <a name="07"></a>
+0. [КВ](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/7%20(Parallel)/7Answers.txt)
+1. [Monte Carlo](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/7%20(Parallel)/Monte_Carlo.cpp)
+2. -[Parallel_accamulate](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/7%20(Parallel)/Parallel_accamulate.cpp)
+   -[Графики](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/7%20(Parallel)/Plot_for_Parallel_accamulate.ipynb)
+3. [Parallel for_each](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/7%20(Parallel)/Par_for_each.cpp)
