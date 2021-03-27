@@ -7,8 +7,8 @@ Spring_term
 - [3 week (Sets, Hashes, Multiindexes)](#03)
 - [4 week (Algorithms)](#04)
 - [5 week (Work with text)](#05)
-- [6 (Streams, File system, Data format)](#06)
-- [7 (Parallel)](#07)
+- [6 week (Streams, File system, Data format)](#06)
+- [7 week (Parallel)](#07)
 
 
 # 1 week (Git and Chrono)  <a name="01"></a>
