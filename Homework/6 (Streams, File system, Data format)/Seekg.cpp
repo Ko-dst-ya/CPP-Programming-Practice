@@ -16,7 +16,7 @@ int main()
     int num;
     std::cin >> num;
 
-    fin.seekp(num * size, std::ios::beg);
+    fin.seekg(num * size, std::ios::beg);
 
     std::string s;
     std::getline(fin, s);
