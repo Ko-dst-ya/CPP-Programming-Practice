@@ -8,17 +8,19 @@ int main()
 
     for(auto i = 0; i < 10; ++i)
         fout << "Hello" + std::to_string(i) << std::endl;
-    
-    auto size = fout.tellp() / 10; // размер слова с учётом доп символов
 
     std::fstream fin("file.txt", std::ios::in);
 
     int num;
     std::cin >> num;
+    
+    std::string s;
+    std::getline(fin, s);
+
+    auto size = s.size() + 2; // учёт двух доп символов
 
     fin.seekg(num * size, std::ios::beg);
-
-    std::string s;
+    
     std::getline(fin, s);
 
     std::cout << s << std::endl;
