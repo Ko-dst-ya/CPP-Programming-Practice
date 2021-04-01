@@ -1,5 +1,7 @@
 #include <chrono>
 #include <execution>
+#include <thread>
+#include <future>
 #include <iomanip>
 #include <iostream>
 #include <numeric>
@@ -7,18 +9,71 @@
 #include <random>
 #include <algorithm>
 
-int main()
+class Timer
+{
+public:
+    using clock_t = std::chrono::steady_clock;
+    using time_point_t = clock_t::time_point;
+
+    Timer() : m_begin(clock_t::now()) {}
+
+    ~Timer()
+    {
+        auto end = clock_t::now();
+
+        std::cout << "micro : " << std::chrono::duration_cast <std::chrono::microseconds> (end - m_begin).count() << std::endl;
+    }
+
+private:
+    time_point_t m_begin;
+};
+
+class Threads_Guard
+{
+public:
+
+    explicit Threads_Guard(std::vector < std::thread > & threads) :
+            m_threads(threads)
+    {}
+
+    Threads_Guard(Threads_Guard const &) = delete;
+
+    Threads_Guard& operator=(Threads_Guard const &) = delete;
+
+    ~Threads_Guard() noexcept
+    {
+        try
+        {
+            for (std::size_t i = 0; i < m_threads.size(); ++i)
+            {
+                if (m_threads[i].joinable())
+                {
+                    m_threads[i].join();
+                }
+            }
+        }
+        catch (...)
+        {
+            // std::abort();
+        }
+    }
+
+private:
+
+    std::vector < std::thread > & m_threads;
+};
+
+double seq_pi(std::size_t N)
 {
     std::random_device rd;
     std::mt19937 g(rd());
 
     static std::uniform_real_distribution < double > urd(0.0, 1.0);
-    auto N = 1e6;
 
     auto count = 0;
 
-   for(auto i = 0; i < N; ++i)
-   {
+    for(std::size_t i = 0; i < N; ++i)
+    {
         auto x = urd(g);
         auto y = urd(g);
 
@@ -26,22 +81,18 @@ int main()
         {
             ++ count;
         }
-   }
+    }
 
-   auto pi = 4.0 * count / N;
+    return 4.0 * count / N;
+}
 
-    std::cout << pi << std::endl;
-    
-    std::vector < std::pair <double, double> > v(N);
-    
-    std::generate(std::begin(v), std::end(v), [&g](){return std::make_pair <double, double> (urd(g), urd(g));});
-
-    int count_1 = std::count_if(std::execution::par, std::begin(v), std::end(v),
-                  [](auto x){return (x.first)*(x.first) + (x.second)*(x.second) <= 1;});
-    
-    auto pi_1 = 4.0 * count_1 / N;
-    
-    std::cout << pi_1 << std::endl;
+int main()
+{
+    auto N = 1e6;
+    {
+        Timer t;
+        std::cout << seq_pi(N) << std::endl;
+    }
 
     system("pause");
 
