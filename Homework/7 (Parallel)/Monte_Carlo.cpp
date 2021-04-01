@@ -86,14 +86,84 @@ double seq_pi(std::size_t N)
     return 4.0 * count / N;
 }
 
+std::size_t dots_in_circle(std::uniform_real_distribution < double > & urd, std::size_t N, std::size_t id)
+{
+    std::mt19937 g(std::chrono::system_clock().now().time_since_epoch().count() + id);
+
+    auto count = 0;
+
+    for(std::size_t i = 0; i < N; ++i)
+    {
+        auto x = urd(g);
+        auto y = urd(g);
+
+        if(x*x + y*y <= 1)
+        {
+            ++ count;
+        }
+    }
+
+    return count;
+}
+
+double par_pi(auto N)
+{
+    std::random_device rd;
+    std::mt19937 g(rd());
+
+    static std::uniform_real_distribution < double > urd(0.0, 1.0);
+
+    const std::size_t min_per_thread = 1000;
+    const std::size_t max_threads =
+            (N + min_per_thread - 1) / min_per_thread;
+
+    const std::size_t hardware_threads =
+            std::thread::hardware_concurrency();
+
+    const std::size_t num_threads =
+            std::min(hardware_threads != 0 ? hardware_threads : 2, max_threads);
+
+    const std::size_t block_size = N / num_threads;
+
+    std::vector < std::future < std::size_t > > futures(num_threads - 1);
+    std::vector < std::thread > threads(num_threads - 1);
+
+    Threads_Guard guard(threads);
+
+    for (std::size_t i = 0; i < (num_threads - 1); ++i)
+    {
+        std::packaged_task < decltype(dots_in_circle) > task(dots_in_circle);
+
+        futures[i] = task.get_future();
+        threads[i] = std::thread(std::move(task), std::ref(urd), block_size, i);
+
+    }
+
+    auto count = dots_in_circle(urd, block_size, num_threads - 1);
+
+    for (std::size_t i = 0; i < (num_threads - 1); ++i)
+    {
+        count += futures[i].get();
+    }
+
+    return 4.0 * count / N;
+}
+
 int main()
 {
     auto N = 1e6;
+    
+    // Приблизительно в 3 раза параллельная версия работает быстрее последовательной
     {
         Timer t;
         std::cout << seq_pi(N) << std::endl;
     }
 
+    {
+        Timer t;
+        std::cout << par_pi(N) << std::endl;
+    }
+    
     system("pause");
 
     return EXIT_SUCCESS;
