@@ -8,6 +8,9 @@
 #include <vector>
 #include <random>
 #include <algorithm>
+#include <atomic>
+
+std::atomic < int > counter(0);
 
 class Timer
 {
