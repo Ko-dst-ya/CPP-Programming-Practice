@@ -9,6 +9,7 @@ Spring_term
 - [5 week (Work with text)](#05)
 - [6 week (Streams, File system, Data format)](#06)
 - [7 week (Parallel)](#07)
+- [8 week (Mutex, Cond_var and Atomic)](#08)
 
 
 # 1 week (Git and Chrono)  <a name="01"></a>
@@ -47,3 +48,9 @@ Spring_term
 2. -  [Parallel_accamulate](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/7%20(Parallel)/Parallel_accamulate.cpp)
    -  [Графики](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/7%20(Parallel)/Plot_for_Parallel_accamulate.ipynb)
 3. [Parallel for_each](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/7%20(Parallel)/Par_for_each.cpp)
+
+# 8 week (Mutex, Cond_var and Atomic) <a name="08"></a>
+0. [КВ](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/8%20(Mutex%2C%20Cond_var%20and%20Atomic)/8Answers.txt)
+1. [Monte Carlo atomic](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/8%20(Mutex%2C%20Cond_var%20and%20Atomic)/Monte_Carlo_atomic.cpp)
+2. [ATGC - понял что надо сделать, но не смог реализовать]
+3. [Priority_queue](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/8%20(Mutex%2C%20Cond_var%20and%20Atomic)/Priority_queue.cpp)
