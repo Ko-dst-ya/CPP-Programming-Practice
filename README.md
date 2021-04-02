@@ -52,5 +52,5 @@ Spring_term
 # 8 week (Mutex, Cond_var and Atomic) <a name="08"></a>
 0. [КВ](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/8%20(Mutex%2C%20Cond_var%20and%20Atomic)/8Answers.txt)
 1. [Monte Carlo atomic](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/8%20(Mutex%2C%20Cond_var%20and%20Atomic)/Monte_Carlo_atomic.cpp)
-2. [ATGC - понял что надо сделать, но не смог реализовать]
+2. ATGC - понял что надо сделать, но не смог реализовать
 3. [Priority_queue](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/8%20(Mutex%2C%20Cond_var%20and%20Atomic)/Priority_queue.cpp)
