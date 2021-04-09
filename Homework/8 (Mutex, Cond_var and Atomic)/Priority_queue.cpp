@@ -3,8 +3,10 @@
 #include <mutex>
 #include <queue>
 
-template < typename T >
-class Threadsafe_Priority_Queue
+template <  typename T
+            typename Container = std::vector < T >,
+            typename Compare = std::less < typename Container::value_type >
+> class Threadsafe_Priority_Queue
 {
 public:
 
