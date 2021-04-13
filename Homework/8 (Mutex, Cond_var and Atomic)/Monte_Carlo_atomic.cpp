@@ -10,8 +10,6 @@
 #include <algorithm>
 #include <atomic>
 
-std::atomic < int > counter(0);
-
 class Timer
 {
 public:
@@ -89,7 +87,7 @@ double seq_pi(std::size_t N)
     return 4.0 * count / N;
 }
 
-void dots_in_circle_atom(std::uniform_real_distribution < double > & urd, std::size_t N, std::size_t id)
+void dots_in_circle_atom(std::uniform_real_distribution < double > & urd, std::size_t N, std::size_t id, std::atomic < int > & counter)
 {
     std::mt19937 g(std::chrono::system_clock().now().time_since_epoch().count() + id);
 
@@ -107,6 +105,8 @@ void dots_in_circle_atom(std::uniform_real_distribution < double > & urd, std::s
 
 double par_pi_atom(auto N)
 {
+    std::atomic < int > counter(0);
+    
     std::random_device rd;
     std::mt19937 g(rd());
 
@@ -124,17 +124,17 @@ double par_pi_atom(auto N)
 
     const std::size_t block_size = N / num_threads;
 
-    std::vector < std::future < std::size_t > > futures(num_threads - 1);
+    std::vector < std::future < void > > futures(num_threads - 1);
     std::vector < std::thread > threads(num_threads - 1);
 
     Threads_Guard guard(threads);
 
     for (std::size_t i = 0; i < (num_threads - 1); ++i)
     {
-        std::packaged_task < decltype(dots_in_circle) > task(dots_in_circle);
+        std::packaged_task < decltype(dots_in_circle_atom) > task(dots_in_circle_atom);
 
         futures[i] = task.get_future();
-        threads[i] = std::thread(std::move(task), std::ref(urd), block_size, i);
+        threads[i] = std::thread(std::move(task), std::ref(urd), block_size, i, std::ref(counter));
 
     }
 
@@ -142,7 +142,7 @@ double par_pi_atom(auto N)
 
     for (std::size_t i = 0; i < (num_threads - 1); ++i)
     {
-        counter += futures[i].get();
+        futures[i].get();
     }
 
     return 4.0 * counter / N;
