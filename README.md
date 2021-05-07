@@ -10,6 +10,7 @@ Spring_term
 - [6 week (Streams, File system, Data format)](#06)
 - [7 week (Parallel)](#07)
 - [8 week (Mutex, Cond_var and Atomic)](#08)
+- [12 week (Fractals and Jelly)](#12)
 
 
 # 1 week (Git and Chrono)  <a name="01"></a>
@@ -54,3 +55,7 @@ Spring_term
 1. [Monte Carlo atomic](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/8%20(Mutex%2C%20Cond_var%20and%20Atomic)/Monte_Carlo_atomic.cpp)
 2. ATGC - понял что надо сделать, но не смог реализовать
 3. [Priority_queue](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/8%20(Mutex%2C%20Cond_var%20and%20Atomic)/Priority_queue.cpp)
+
+# 12 week (Fractals and Jelly) <a name="12"></a>
+1.  [Множество Жулиа](https://github.com/Ko-dst-ya/CPP-Programming-Practice/tree/master/Homework/12%20(Fractals))
+2.  ["Желе" (упругая кристаллическая решётка)](https://github.com/Ko-dst-ya/CPP-Programming-Practice/tree/master/Homework/12%20(Jelly))
