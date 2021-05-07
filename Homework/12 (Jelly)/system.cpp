@@ -1,16 +1,16 @@
 #include "system.hpp"
 
-const float cartesian_stiffness = 0.08f; // вертикальная и горизональная жёсткости
-const float diagonal_stiffness = 0.04f; // диагональная жёсткость
+const float cartesian_stiffness = 0.08f; // РІРµСЂС‚РёРєР°Р»СЊРЅР°СЏ Рё РіРѕСЂРёР·РѕРЅР°Р»СЊРЅР°СЏ Р¶С‘СЃС‚РєРѕСЃС‚Рё
+const float diagonal_stiffness = 0.04f; // РґРёР°РіРѕРЅР°Р»СЊРЅР°СЏ Р¶С‘СЃС‚РєРѕСЃС‚СЊ
 
 void System::initialize()
 {
     const auto size_x = std::size(m_particles[0]);
     const auto size_y = std::size(m_particles);
 
-	for (auto i = 0U; i < size_y-1; ++i) // минус 1 из-за границ - они не зацикливаются на начало как было с шариком
+	for (auto i = 0U; i < size_y-1; ++i) // РјРёРЅСѓСЃ 1 РёР·-Р·Р° РіСЂР°РЅРёС† - РѕРЅРё РЅРµ Р·Р°С†РёРєР»РёРІР°СЋС‚СЃСЏ РЅР° РЅР°С‡Р°Р»Рѕ РєР°Рє Р±С‹Р»Рѕ СЃ С€Р°СЂРёРєРѕРј
 	{
-	    for (auto j = 0U; j < size_x-1; ++j) // минус 1 из-за границ - они не зацикливаются на начало как было с шариком
+	    for (auto j = 0U; j < size_x-1; ++j) // РјРёРЅСѓСЃ 1 РёР·-Р·Р° РіСЂР°РЅРёС† - РѕРЅРё РЅРµ Р·Р°С†РёРєР»РёРІР°СЋС‚СЃСЏ РЅР° РЅР°С‡Р°Р»Рѕ РєР°Рє Р±С‹Р»Рѕ СЃ С€Р°СЂРёРєРѕРј
 	    {
 		    m_links.push_back(Link(particle(i,j), particle(i+1, j), cartesian_stiffness));
 		    m_links.push_back(Link(particle(i,j), particle(i, j+1), cartesian_stiffness));
@@ -18,7 +18,7 @@ void System::initialize()
             m_links.push_back(Link(particle(i,j+1), particle(i+1, j), diagonal_stiffness));
 
             if (j == size_x-2)
-            { //дополнительное соединение по крайней вертикали
+            { //РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРµ СЃРѕРµРґРёРЅРµРЅРёРµ РїРѕ РєСЂР°Р№РЅРµР№ РІРµСЂС‚РёРєР°Р»Рё
                 m_links.push_back(Link(particle(i,j+1), particle(i+1, j+1), cartesian_stiffness));
             }
         }
@@ -44,7 +44,7 @@ void System::update() const
     const auto size_x = std::size(m_particles[0]);
     const auto size_y = std::size(m_particles);
 
-    // взаимодействие со стенкой
+    // РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёРµ СЃРѕ СЃС‚РµРЅРєРѕР№
     for (auto i = 0U; i < size_y; ++i)
     {
         for (auto j = 0U; j < size_x; ++j)
@@ -67,7 +67,7 @@ void System::update() const
                 m_particles[i][j]->set_x(m_min_point.x + m_particles[i][j]->radius());
             }
 
-            for (auto k = 0U; k < std::size(m_links); ++k) // подновляем связи после взаимодействия со стенкой
+            for (auto k = 0U; k < std::size(m_links); ++k) // РїРѕРґРЅРѕРІР»РµРЅРёРµ СЃРІСЏР·РµР№ РїРѕСЃР»Рµ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃРѕ СЃС‚РµРЅРєРѕР№
             {
                 m_links[k].update();
             }
