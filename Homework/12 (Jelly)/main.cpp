@@ -15,7 +15,7 @@ int main(int argc, char ** argv)
 	sf::Vector2f min_point(  0.0f,   0.0f);
 	sf::Vector2f max_point(775.0f, 575.0f);
 
-    const int N = 7; // количество частичек в одном слое (квадратная решётка)
+    const int N = 7; // РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃС‚РёС‡РµРє РІ РѕРґРЅРѕРј СЃР»РѕРµ (РєРІР°РґСЂР°С‚РЅР°СЏ СЂРµС€С‘С‚РєР°)
 
     const auto R = length(max_point - min_point) * 0.1f;
 
@@ -23,14 +23,14 @@ int main(int argc, char ** argv)
 
     const auto r = 2.5f;
 
-    // для прямоугольного желе
+    // РґР»СЏ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРѕРіРѕ Р¶РµР»Рµ
 //	std::vector < std::vector < System::particle_t >  > particles
 //	        (N-2, std::vector(N, std::make_shared<Particle>()));
 
     std::vector < std::vector < System::particle_t >  > particles
             (N, std::vector(N, std::make_shared<Particle>()));
 
-    // для прямоугольного желе
+    // РґР»СЏ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРѕРіРѕ Р¶РµР»Рµ
 //	for (int i = 0; i < N-2; ++i)
 //	{
 //	    for (int j = 0; j < N; ++j)
@@ -60,7 +60,7 @@ int main(int argc, char ** argv)
         std::cout << std::endl;
     }
 
-	System system(min_point, max_point, particles); // вся система частиц
+	System system(min_point, max_point, particles); // РІСЃСЏ СЃРёСЃС‚РµРјР° С‡Р°СЃС‚РёС†
 
 	sf::Event event;
 
@@ -104,9 +104,8 @@ int main(int argc, char ** argv)
             {
                 sf::CircleShape circle(2.0f * r);
 
-                circle.setPosition(system.particle(i,j)->position() + sf::Vector2f(r, r)); // j - index_x
-                    // i - index_y
-
+                circle.setPosition(system.particle(i,j)->position() + sf::Vector2f(r, r)); // j - index_x  i - index_y
+                    
                 circle.setFillColor(sf::Color::Green);
 
                 window.draw(circle);
