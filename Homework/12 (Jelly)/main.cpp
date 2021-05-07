@@ -43,7 +43,6 @@ int main(int argc, char ** argv)
 //            particles[i][j] = std::make_shared < Particle > (position, position,
 //                    sf::Vector2f(0.0f, 8.0f), r);
 //	    }
-//        std::cout << std::endl;
 //	}
 
     for (int i = 0; i < N; ++i)
@@ -57,7 +56,6 @@ int main(int argc, char ** argv)
             particles[i][j] = std::make_shared < Particle > (position, position,
                                                              sf::Vector2f(0.0f, 10.0f), r);
         }
-        std::cout << std::endl;
     }
 
 	System system(min_point, max_point, particles); // вся система частиц
