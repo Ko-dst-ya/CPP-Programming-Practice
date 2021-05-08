@@ -62,4 +62,7 @@ Spring_term
     - [c = (-1.0, 0.0)](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/12%20(Fractals)/Julia2_1.PNG)
     - [c = (0.28, 0.0113)](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/12%20(Fractals)/Julia3_1.PNG)
     - Увеличенные картинки можно посмотреть в самой папке с файлами кода.
-2.  ["Желе" (упругая кристаллическая решётка)](https://github.com/Ko-dst-ya/CPP-Programming-Practice/tree/master/Homework/12%20(Jelly))
+2. - ["Желе" (упругая кристаллическая решётка)](https://github.com/Ko-dst-ya/CPP-Programming-Practice/tree/master/Homework/12%20(Jelly))
+   - [Жёсткости: cartesian_stiffness = 0.4, diagonal_stiffness = 0.2](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/12%20(Jelly)/Pictures/Jelly_corner.png)
+   - [Жёсткости в 10 раз меньше](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/12%20(Jelly)/Pictures/Jelly_0%2C1stiffness_corner.png)
+   - [Больше картинок](https://github.com/Ko-dst-ya/CPP-Programming-Practice/tree/master/Homework/12%20(Jelly)/Pictures)
