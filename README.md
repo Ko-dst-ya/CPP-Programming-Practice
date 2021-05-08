@@ -57,5 +57,9 @@ Spring_term
 3. [Priority_queue](https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/8%20(Mutex%2C%20Cond_var%20and%20Atomic)/Priority_queue.cpp)
 
 # 12 week (Fractals and Jelly) <a name="12"></a>
-1.  [Множество Жулиа](https://github.com/Ko-dst-ya/CPP-Programming-Practice/tree/master/Homework/12%20(Fractals))
+1.  - [Множество Жулиа](https://github.com/Ko-dst-ya/CPP-Programming-Practice/tree/master/Homework/12%20(Fractals))
+    - c = (-0.75, 0.11)(https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/12%20(Fractals)/Julia1_1.PNG)
+    - c = (-1.0, 0.0)(https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/12%20(Fractals)/Julia2_1.PNG)
+    - c = (0.28, 0.0113)(https://github.com/Ko-dst-ya/CPP-Programming-Practice/blob/master/Homework/12%20(Fractals)/Julia3_1.PNG)
+    - Увеличенные картинки можно посмотреть в самой папке с файлами кода.
 2.  ["Желе" (упругая кристаллическая решётка)](https://github.com/Ko-dst-ya/CPP-Programming-Practice/tree/master/Homework/12%20(Jelly))
